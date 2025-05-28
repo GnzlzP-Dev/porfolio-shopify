@@ -33,8 +33,14 @@ export default function ContactForm() {
               method="POST"
               className="space-y-6"
               netlify-honeypot="bot-field"
-              netlify
-              >
+              data-netlify-recaptcha="true"
+              data-netlify="true">
+              <p class="hidden">
+                <label>
+                  Don’t fill this out if you’re human:{" "}
+                  <input name="bot-field" />
+                </label>
+              </p>
               <div>
                 <label
                   for="name"
@@ -66,7 +72,7 @@ export default function ContactForm() {
                   placeholder="tu@email.com"
                 />
               </div>
- <div>
+              <div>
                 <label
                   for="phone"
                   className="block text-sm font-medium text-gray-700 mb-1">
@@ -112,7 +118,7 @@ export default function ContactForm() {
                   className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-shopify focus:border-transparent"
                   placeholder="Describe tu proyecto..."></textarea>
               </div>
-
+              <div data-netlify-recaptcha="true"></div>
               <motion.button
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
@@ -217,14 +223,13 @@ export default function ContactForm() {
                 Ubicación
               </h3>
               <div className="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden">
-                <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.521260322283!2d-75.5967049241646!3d6.211505493798887!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e442829e8e9f3e3%3A0x7c7f6a1c1d23f3b5!2sMedell%C3%ADn%2C%20Antioquia!5e0!3m2!1sen!2sco!4v1620000000000!5m2!1sen!2sco" 
-                width="100%" 
-                height="300" 
-                allowfullscreen="" 
-                loading="lazy"
-                className="rounded-lg"
-              ></iframe>
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.521260322283!2d-75.5967049241646!3d6.211505493798887!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e442829e8e9f3e3%3A0x7c7f6a1c1d23f3b5!2sMedell%C3%ADn%2C%20Antioquia!5e0!3m2!1sen!2sco!4v1620000000000!5m2!1sen!2sco"
+                  width="100%"
+                  height="300"
+                  allowfullscreen=""
+                  loading="lazy"
+                  className="rounded-lg"></iframe>
               </div>
             </div>
           </motion.div>
