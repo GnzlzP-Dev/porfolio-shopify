@@ -1,0 +1,15 @@
+---
+// src/pages/contacto.astro
+import '../styles/global.css'; 
+import MainLayout from '../layouts/MainLayout.astro';
+import ContactForm from '../components/ContactForm.jsx'; // (Opcional: componente separado)
+
+// Metadatos para SEO
+const pageTitle = "Contacto | Especialista Shopify";
+const pageDescription = "Contáctame para desarrollar tu tienda Shopify profesional";
+
+---
+
+<MainLayout title={pageTitle} description={pageDescription}>
+        <ContactForm client:load />
+</MainLayout>

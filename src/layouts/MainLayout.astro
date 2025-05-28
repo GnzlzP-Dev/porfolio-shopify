@@ -1,0 +1,70 @@
+---
+import '../styles/global.css';
+import Header from '../components/Header.jsx';
+import Footer from '../components/Footer.astro';
+const { title = "Mi Portfolio | Desarrollador Web", description = "Portafolio de proyectos destacados en Shopify, Liquid y Apps personalizadas. Especialista en desarrollo de tiendas Shopify." } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <!-- Meta básico -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- SEO -->
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  
+  <!-- OpenGraph / Redes Sociales -->
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tudominio.com" />
+  <meta property="og:image" content="/social-preview.jpg" />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  
+  
+  <!-- Scripts de animación (GSAP) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+   
+</head>
+
+<body class="font-sans bg-gray-100 text-gray-800 antialiased">
+
+  <Header client:load />
+  
+  
+  <main class="min-h-screen bg-[url('images/Hero.webp')] bg-cover bg-no-repeat bg-center">
+    <slot />
+  </main>
+
+ 
+ <Footer/>
+
+  <!-- Scripts de animación -->
+  <script is:inline>
+    document.addEventListener('DOMContentLoaded', () => {
+      if (typeof gsap !== 'undefined') {
+        gsap.registerPlugin(ScrollTrigger);
+        
+        gsap.utils.toArray('.animate-fadeIn').forEach(el => {
+          gsap.from(el, {
+            opacity: 0,
+            y: 20,
+            duration: 0.8,
+            scrollTrigger: {
+              trigger: el,
+              start: "top 80%",
+            }
+          });
+        });
+      }
+    });
+  </script>
+<!-- Astro client hydration is handled automatically; no need for manual import of 'astro:client' -->
+</body>
+</html>

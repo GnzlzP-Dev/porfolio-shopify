@@ -1,0 +1,18 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import { shopifyProjects } from '../constants/projects.js';
+import ProjectCard from '../components/ProjectCard.jsx';
+const title = "Proyectos Shopify | Especialista en Desarrollo";
+const description = "Proyectos destacados en Shopify, Liquid y Apps personalizadas";
+
+---
+<MainLayout title={title} description={description}>
+  <section class="container mx-auto px-6 py-12">
+    <h1 class="text-3xl font-bold mb-8">Mis Proyectos Shopify</h1>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {shopifyProjects.map(project => (
+        <ProjectCard project={project} client:load/>
+      ))}
+    </div>
+  </section>
+</MainLayout>

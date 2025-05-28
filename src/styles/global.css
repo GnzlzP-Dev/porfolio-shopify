@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+/* Definir colores personalizados con Tailwind v4 */
+:root {
+  --shopify: #512da5;
+  --shopify-dark: #42228d;
+  --shopify-light: #8160ce;
+}
+
+
+.shopify, .text-shopify{
+  color: var(--shopify);
+}
+
+.bg-shopify {
+  background-color: var(--shopify);
+}
+
+.hover\:text-shopify:hover {
+  color: var(--shopify);
+}
+
+

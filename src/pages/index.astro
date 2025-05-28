@@ -1,0 +1,131 @@
+---
+import "../styles/global.css";
+import MainLayout from "../layouts/MainLayout.astro";
+import MainTitle from "../components/MainTitle.jsx";
+import { shopifyProjects } from "../constants/projects.js";
+import ProjectCard from "../components/ProjectCard.jsx";
+
+const featuredProjects = shopifyProjects.slice(0, 4);
+---
+
+<MainLayout>
+  <!-- Hero Section -->
+
+  <section class=" text-white py-16 px-4">
+    <div class="container mx-auto text-center max-w-4xl">
+      <MainTitle client:load />
+      
+      
+    </div>
+  </section>
+
+  <!-- Beneficios Clave -->
+  <section class="py-16 px-4">
+    <div class="container mx-auto max-w-6xl">
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="p-6 bg-gray-50 rounded-lg shadow-sm">
+          <div class="text-4xl mb-4">🏪</div>
+          <h3 class="text-xl font-bold mb-2">Vende 24/7 desde tu celular</h3>
+          <p class="text-gray-600">
+            Atiende pedidos aunque tu local esté cerrado
+          </p>
+        </div>
+
+        <div class="p-6 bg-gray-50 rounded-lg shadow-sm">
+          <div class="text-4xl mb-4">📦</div>
+          <h3 class="text-xl font-bold mb-2">
+            Controla tus pedidos fácilmente
+          </h3>
+          <p class="text-gray-600">Todo en un solo lugar: inventario y pagos</p>
+        </div>
+
+        <div class="p-6 bg-gray-50 rounded-lg shadow-sm">
+          <div class="text-4xl mb-4">📱</div>
+          <h3 class="text-xl font-bold mb-2">Administra desde tu teléfono</h3>
+          <p class="text-gray-600">
+            Actualiza precios y productos desde cualquier lugar
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cómo Funciona -->
+  <section class="py-16 px-4">
+    <div class="container mx-auto max-w-4xl text-center">
+      <h2 class="text-amber-50 text-3xl font-bold mb-8">¿Cómo funciona?</h2>
+      <div class="grid md:grid-cols-4 gap-6">
+        <div class="p-4">
+          <div
+            class="bg-shopify text-white w-12 h-12 rounded-full mx-auto flex items-center justify-center text-2xl font-bold">
+            1
+          </div>
+          <p class="text-amber-50 font-semibold mt-4">Hablamos de tu negocio</p>
+          <!-- <p class="text-sm text-gray-600">(Sin términos complicados)</p> -->
+        </div>
+
+        <div class="p-4">
+          <div
+            class="bg-shopify text-white w-12 h-12 rounded-full mx-auto flex items-center justify-center text-2xl font-bold">
+            2
+          </div>
+          <p class="text-amber-50 font-semibold mt-4">Creamos tu tienda</p>
+          <p class="text-sm text-amber-50">Diseño profesional y funcional</p>
+        </div>
+
+        <div class="p-4">
+          <div
+            class="bg-shopify text-white w-12 h-12 rounded-full mx-auto flex items-center justify-center text-2xl font-bold">
+            3
+          </div>
+          <p class="text-amber-50 font-semibold mt-4">Te enseñamos a usarla</p>
+          <p class="text-sm text-amber-50">Capacitación personalizada</p>
+        </div>
+
+        <div class="p-4">
+          <div
+            class="bg-shopify text-white w-12 h-12 rounded-full mx-auto flex items-center justify-center text-2xl font-bold">
+            4
+          </div>
+          <p class="text-amber-50 font-semibold mt-4">¡Empiezas a vender!</p>
+          <p class="text-sm text-amber-50">Con soporte continuo</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Casos Reales -->
+  <section class="container mx-auto px-6 py-12">
+    
+    
+           <h1 class="text-amber-50 text-4xl md:text-5xl font-bold text-center mb-12 z-10">
+          Casos reales
+        </h1>
+    <div class="grid md:grid-cols-2 gap-8">
+      {
+        featuredProjects.map((project) => (
+          <ProjectCard project={project} client:load />
+        ))
+      }
+    </div>
+  </section>
+
+  <!-- CTA Final -->
+  <section class="bg-[var(--shopify-light)] text-white py-16 px-4">
+    <div class="container mx-auto max-w-2xl text-center">
+      <h2 class="text-3xl font-bold mb-6">¿Listo para empezar?</h2>
+      <div class="flex flex-col md:flex-row gap-4 justify-center">
+        <a
+          href="/contacto"
+          class="bg-[var(--shopify-dark)] text-white px-6 py-3 rounded-full font-bold hover:bg-gray-100 hover:text-gray-600 transition-colors duration-200"
+          >Quiero mi tienda nueva</a
+        >
+        <!-- <a
+          href="/mejorar"
+          class="border-2 border-white px-6 py-3 rounded-full hover:bg-white hover:text-[#96BF48] transition-colors duration-200"
+          >Ya tengo tienda, quiero mejorarla</a
+        > -->
+      </div>
+    </div>
+  </section>
+</MainLayout>
