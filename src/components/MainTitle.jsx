@@ -12,7 +12,7 @@ export default function MainTitle() {
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.2 }}
           className="text-center mb-12">
-          <h1 class="text-shopify text-4xl md:text-5xl font-bold mb-6">
+          <h1 className="text-shopify text-4xl md:text-5xl font-bold mb-6">
             Lleva tu negocio físico al mundo digital{" "}
             <span className="block text-xl mt-4">sin complicaciones</span>
           </h1>
