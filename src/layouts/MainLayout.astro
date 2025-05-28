@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import { ClientRouter } from "astro:transitions";
 import Header from '../components/Header.jsx';
 import Footer from '../components/Footer.astro';
 const { title = "Mi Portfolio | Desarrollador Web", description = "Portafolio de proyectos destacados en Shopify, Liquid y Apps personalizadas. Especialista en desarrollo de tiendas Shopify." } = Astro.props;
@@ -20,17 +21,18 @@ const { title = "Mi Portfolio | Desarrollador Web", description = "Portafolio de
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://tudominio.com" />
-  <meta property="og:image" content="/social-preview.jpg" />
+  <!-- <meta property="og:url" content="https://tudominio.com" />
+  <meta property="og:image" content="/social-preview.jpg" /> -->
   
   <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/svg+xml" href="/g.png" />
   
   
   <!-- Scripts de animación (GSAP) -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
    
+  <ClientRouter />
 </head>
 
 <body class="font-sans bg-gray-100 text-gray-800 antialiased">

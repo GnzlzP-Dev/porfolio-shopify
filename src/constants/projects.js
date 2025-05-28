@@ -1,4 +1,17 @@
 export const shopifyProjects = [
+  {
+  image: "images/TIENDA.webp",
+  title: "Tienda La Reina",
+  url: "https://lareinaboutique.store/",
+  description: "Una boutique en línea que celebra la moda y la belleza con un enfoque en la cultura latina, dirigida a mujeres que buscan estilo y autenticidad.",
+  highlights: [
+    "Organización: Estructura vibrante con categorías claras que resaltan la identidad cultural de los productos.",
+    "Inventario: Gestión eficiente con actualizaciones regulares, asegurando disponibilidad de productos tendencia.",
+    "Alcance: Conecta con un público hispanohablante global, destacando la relevancia cultural de la marca.",
+    "Experiencia de usuario: Diseño colorido y dinámico que crea una conexión emocional con los clientes."
+  ],
+  results: "Aumento de las ventas en línea gracias a una experiencia de compra atractiva y culturalmente relevante."
+},
 {
   image: "images/EBFASHIONS.webp",
   title: "EB Fashions",
@@ -13,6 +26,19 @@ export const shopifyProjects = [
   results: "Aumento en las ventas en línea gracias a una experiencia de compra rápida y un diseño que conecta con las tendencias actuales."
 },
 {
+  image: "images/LELUXE.webp",
+  title: "LeLuxe Body",
+  url: "https://leluxebody.shop/",
+  description: "Una tienda de productos de cuidado corporal que ofrece soluciones premium para clientes que valoran el bienestar y el lujo accesible.",
+  highlights: [
+    "Organización: Estructura clara con categorías para cremas, aceites y accesorios, facilitando la navegación.",
+    "Inventario: Selección curada con descripciones detalladas, asegurando una gestión eficiente y transparente del stock.",
+    "Alcance: Atrae a un público global interesado en el cuidado personal, con un diseño que transmite calidad y sofisticación.",
+    "Experiencia de usuario: Diseño minimalista con un enfoque en la experiencia sensorial, generando confianza en los productos."
+  ],
+  results: "Mejora en la percepción de la marca gracias a una experiencia de compra elegante y un diseño que resalta la calidad."
+},
+{
   image: "images/PARFUMS.webp",
   title: "Parfums Deluxe",
   url: "https://parfumsdeluxe.store/",
@@ -25,6 +51,7 @@ export const shopifyProjects = [
   ],
   results: "Mejora en la retención de clientes gracias a una experiencia de compra premium y un diseño que resalta la calidad de los productos."
 },
+
 {
   image: "images/VK.webp",
   title: "Vk Balance",
@@ -51,19 +78,7 @@ export const shopifyProjects = [
   ],
   results: "Aumento en las ventas en línea gracias a una experiencia de compra atractiva y un diseño que refleja la identidad de la marca."
 },
-{
-  image: "images/LELUXE.webp",
-  title: "LeLuxe Body",
-  url: "https://leluxebody.shop/",
-  description: "Una tienda de productos de cuidado corporal que ofrece soluciones premium para clientes que valoran el bienestar y el lujo accesible.",
-  highlights: [
-    "Organización: Estructura clara con categorías para cremas, aceites y accesorios, facilitando la navegación.",
-    "Inventario: Selección curada con descripciones detalladas, asegurando una gestión eficiente y transparente del stock.",
-    "Alcance: Atrae a un público global interesado en el cuidado personal, con un diseño que transmite calidad y sofisticación.",
-    "Experiencia de usuario: Diseño minimalista con un enfoque en la experiencia sensorial, generando confianza en los productos."
-  ],
-  results: "Mejora en la percepción de la marca gracias a una experiencia de compra elegante y un diseño que resalta la calidad."
-},
+
 {
   image: "images/DURAMAXX.webp",
   title: "Duramaxx",
@@ -103,17 +118,5 @@ export const shopifyProjects = [
   ],
   results: "Incremento en la retención de clientes gracias a una experiencia de personalización innovadora y atractiva."
 },
-{
-  image: "images/LAREINA.webp",
-  title: "Tienda La Reina",
-  url: "https://lareinaboutique.store/",
-  description: "Una boutique en línea que celebra la moda y la belleza con un enfoque en la cultura latina, dirigida a mujeres que buscan estilo y autenticidad.",
-  highlights: [
-    "Organización: Estructura vibrante con categorías claras que resaltan la identidad cultural de los productos.",
-    "Inventario: Gestión eficiente con actualizaciones regulares, asegurando disponibilidad de productos tendencia.",
-    "Alcance: Conecta con un público hispanohablante global, destacando la relevancia cultural de la marca.",
-    "Experiencia de usuario: Diseño colorido y dinámico que crea una conexión emocional con los clientes."
-  ],
-  results: "Aumento de las ventas en línea gracias a una experiencia de compra atractiva y culturalmente relevante."
-}
+
 ];
