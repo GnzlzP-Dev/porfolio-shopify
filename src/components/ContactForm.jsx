@@ -32,7 +32,8 @@ export default function ContactForm() {
             <form
               method="POST"
               className="space-y-6"
-              data-netlify="true"
+              netlify-honeypot="bot-field"
+              netlify
               >
               <div>
                 <label
