@@ -34,7 +34,9 @@ export default function ContactForm() {
               className="space-y-6"
               netlify-honeypot="bot-field"
               data-netlify-recaptcha="true"
-              data-netlify="true">
+              data-netlify="true"
+              action={"/gracias"}
+              >
               <p className="hidden">
                 <label>
                   Don’t fill this out if you’re human:{" "}
