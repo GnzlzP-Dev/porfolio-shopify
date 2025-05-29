@@ -30,9 +30,10 @@ export default function ContactForm() {
             transition={{ delay: 0.4 }}
             className="bg-gray-50 p-8 rounded-xl shadow-sm border border-gray-100">
             <form
+              name="contact"
               method="POST"
-              netlify
-              netlify-honeypot="bot-field"
+              data-netlify="true"
+              netlify-netlify-honeypot="bot-field"
               data-netlify-recaptcha="true"
               action={"/gracias"}
               className="space-y-6"
@@ -84,7 +85,7 @@ export default function ContactForm() {
                 <input
                   type="tel"
                   id="phone"
-                  name="phome"
+                  name="phone"
                   required
                   className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-shopify focus:border-transparent"
                   placeholder="Número de contacto"
