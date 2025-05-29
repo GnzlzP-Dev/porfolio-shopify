@@ -79,7 +79,7 @@ export default function ContactForm() {
                   Teléfono
                 </label>
                 <input
-                  type="phone"
+                  type="tel"
                   id="phone"
                   name="phome"
                   required
