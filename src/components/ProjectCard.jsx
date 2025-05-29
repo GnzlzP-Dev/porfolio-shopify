@@ -42,7 +42,7 @@ export default function ProjectCard({ project }) {
           )}
         </div>
 
-        <p className="text-gray-700 line-clamp-3">{description}</p>
+        <p className="text-gray-700">{description}</p>
 
         {project.highlights && (
           <ul className="space-y-2 text-sm text-gray-600">
