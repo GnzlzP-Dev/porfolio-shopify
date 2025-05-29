@@ -2,6 +2,9 @@ import { motion } from "framer-motion";
 import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
 
 export default function ProjectCard({ project }) {
+
+  const { image, title, url, description, results } = project;
+
   return (
     <motion.article
       initial={{ opacity: 0, y: 20 }}
@@ -10,10 +13,11 @@ export default function ProjectCard({ project }) {
       whileTap={{ scale: 0.98 }}
       transition={{ duration: 0.3, ease: "easeInOut" }}
       className="group bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100 overflow-hidden">
+      
       <div className="relative aspect-video overflow-hidden">
         <img
-          src={project?.image}
-          alt={project.description || `Captura de pantalla de ${project.title}`}
+          src={image}
+          alt={description || `Captura de pantalla de ${title}`}
           className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
           loading="lazy"
         />
@@ -27,22 +31,22 @@ export default function ProjectCard({ project }) {
           </h3>
           {project.url && (
             <motion.a
-              href={project.url}
+              href={url}
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.1 }}
               className="text-blue-600 hover:text-blue-800 transition-colors"
-              aria-label={`Visitar ${project.title} (se abre en nueva ventana)`}>
+              aria-label={`Visitar ${title} (se abre en nueva ventana)`}>
               <ArrowTopRightOnSquareIcon className="h-5 w-5" />
             </motion.a>
           )}
         </div>
 
-        <p className="text-gray-700 line-clamp-3">{project.description}</p>
+        <p className="text-gray-700 line-clamp-3">{description}</p>
 
-        {/* {project.highlights && (
+        {project.highlights && (
           <ul className="space-y-2 text-sm text-gray-600">
-            {project.highlights.map((highlight, index) => (
+            {project.highlights.slice(0,4).map((highlight, index) => (
               <li key={index} className="flex items-start">
                 <svg
                   className="flex-shrink-0 w-4 h-4 mr-2 text-blue-600"
@@ -59,13 +63,13 @@ export default function ProjectCard({ project }) {
               </li>
             ))}
           </ul>
-        )} */}
+        )}
 
-        {project.results && (
+        {results && (
           <div className="mt-4">
             <p className="text-sm font-medium text-gray-900 bg-blue-50 p-3 rounded-lg">
               <span className="font-semibold">Resultados:</span>{" "}
-              {project.results}
+              {results}
             </p>
           </div>
         )}

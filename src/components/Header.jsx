@@ -16,13 +16,13 @@ export default function Header() {
           <sub>{":{Dev}"}</sub>
         </motion.a>
         <ul className=" md:flex space-x-8">
-          <li>
+          {/* <li>
             <a
               href="/proyectos"
               className="hover:text-shopify transition-colors duration-200">
               Proyectos
             </a>
-          </li>
+          </li> */}
           <li>
             <a
               href="/contacto"
