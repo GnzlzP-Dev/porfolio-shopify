@@ -44,7 +44,7 @@ export default function ProjectCard({ project }) {
           {project.description}
         </p>
 
-        {project.highlights && (
+        {/* {project.highlights && (
           <ul className="space-y-2 text-sm text-gray-600">
             {project.highlights.map((highlight, index) => (
               <li key={index} className="flex items-start">
@@ -63,7 +63,7 @@ export default function ProjectCard({ project }) {
               </li>
             ))}
           </ul>
-        )}
+        )} */}
 
         {project.results && (
           <div className="mt-4">
