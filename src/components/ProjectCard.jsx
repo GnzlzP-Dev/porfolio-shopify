@@ -12,12 +12,12 @@ export default function ProjectCard({ project }) {
       className="group bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100 overflow-hidden"
     >
       <div className="relative aspect-video overflow-hidden">
-        <img 
+        {project.image && (<img 
           src={project.image} 
           alt={project.description || `Captura de pantalla de ${project.title}`}
           className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
           loading="lazy"
-        />
+        />)}
         <div className="absolute inset-0 bg-gradient-to-t from-gray-900/30 to-transparent" />
       </div>
 
