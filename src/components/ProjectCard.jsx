@@ -1,23 +1,22 @@
-import { motion } from 'framer-motion';
-import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/outline';
+import { motion } from "framer-motion";
+import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
 
 export default function ProjectCard({ project }) {
   return (
-    <motion.article 
+    <motion.article
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       whileHover={{ scale: 1.03 }}
       whileTap={{ scale: 0.98 }}
-      transition={{ duration: 0.3, ease: 'easeInOut' }}
-      className="group bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100 overflow-hidden"
-    >
+      transition={{ duration: 0.3, ease: "easeInOut" }}
+      className="group bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100 overflow-hidden">
       <div className="relative aspect-video overflow-hidden">
-        {project.image && (<img 
-          src={project.image} 
+        <img
+          src={project.image}
           alt={project.description || `Captura de pantalla de ${project.title}`}
           className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
           loading="lazy"
-        />)}
+        />
         <div className="absolute inset-0 bg-gradient-to-t from-gray-900/30 to-transparent" />
       </div>
 
@@ -33,16 +32,13 @@ export default function ProjectCard({ project }) {
               rel="noopener noreferrer"
               whileHover={{ scale: 1.1 }}
               className="text-blue-600 hover:text-blue-800 transition-colors"
-              aria-label={`Visitar ${project.title} (se abre en nueva ventana)`}
-            >
+              aria-label={`Visitar ${project.title} (se abre en nueva ventana)`}>
               <ArrowTopRightOnSquareIcon className="h-5 w-5" />
             </motion.a>
           )}
         </div>
 
-        <p className="text-gray-700 line-clamp-3">
-          {project.description}
-        </p>
+        <p className="text-gray-700 line-clamp-3">{project.description}</p>
 
         {/* {project.highlights && (
           <ul className="space-y-2 text-sm text-gray-600">
@@ -68,7 +64,8 @@ export default function ProjectCard({ project }) {
         {project.results && (
           <div className="mt-4">
             <p className="text-sm font-medium text-gray-900 bg-blue-50 p-3 rounded-lg">
-              <span className="font-semibold">Resultados:</span> {project.results}
+              <span className="font-semibold">Resultados:</span>{" "}
+              {project.results}
             </p>
           </div>
         )}
