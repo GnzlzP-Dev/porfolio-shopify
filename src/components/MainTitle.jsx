@@ -14,7 +14,7 @@ export default function MainTitle() {
           className="text-center mb-12">
           <h1 className="text-shopify text-4xl md:text-5xl font-bold mb-6">
             Lleva tu negocio físico al mundo digital{" "}
-            <span className="block text-xl mt-4">sin complicaciones</span>
+            <span className="block text-xl mt-4">Sin complicaciones!</span>
           </h1>
           <p className="text-[var(--shopify-dark)] text-xl mb-8">
             ¿Vendes en tu local, mercados o por WhatsApp? Te ayudamos a crear tu
@@ -26,6 +26,7 @@ export default function MainTitle() {
             Quiero mi tienda online →
           </a>
         </motion.div>
+        <span className="block text-[var(--shopify-dark)] text-3xl mb-8">Aprende como ⬇ </span>
       </div>
     </motion.section>
   );

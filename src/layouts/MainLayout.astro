@@ -1,72 +1,76 @@
 ---
-import '../styles/global.css';
+import "../styles/global.css";
 import { ClientRouter } from "astro:transitions";
-import Header from '../components/Header.jsx';
-import Footer from '../components/Footer.astro';
-const { title = "Mi Portfolio | Desarrollador Web", description = "Portafolio de proyectos destacados en Shopify, Liquid y Apps personalizadas. Especialista en desarrollo de tiendas Shopify." } = Astro.props;
+import Header from "../components/Header.jsx";
+import Footer from "../components/Footer.astro";
+const {
+  title = "Mi Portfolio | Desarrollador Web",
+  description = "Portafolio de proyectos destacados en Shopify, Liquid y Apps personalizadas. Especialista en desarrollo de tiendas Shopify.",
+} = Astro.props;
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es" class="scroll-smooth">
-<head>
-  <!-- Meta básico -->
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-  <!-- SEO -->
-  <title>{title}</title>
-  <meta name="description" content={description} />
-  
-  <!-- OpenGraph / Redes Sociales -->
-  <meta property="og:title" content={title} />
-  <meta property="og:description" content={description} />
-  <meta property="og:type" content="website" />
-  <!-- <meta property="og:url" content="https://tudominio.com" />
+  <head>
+    <!-- Meta básico -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO -->
+    <title>{title}</title>
+    <meta name="description" content={description} />
+
+    <!-- OpenGraph / Redes Sociales -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <!-- <meta property="og:url" content="https://tudominio.com" />
   <meta property="og:image" content="/social-preview.jpg" /> -->
-  
-  <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="/g.png" />
-  
-  
-  <!-- Scripts de animación (GSAP) -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
-   
-  <ClientRouter />
-</head>
 
-<body class="font-sans min-h-screen
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/g.png" />
+
+    <!-- Scripts de animación (GSAP) -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+      defer></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"
+      defer></script>
+
+    <ClientRouter />
+  </head>
+
+  <body
+    class="font-sans min-h-screen
     bg-neutral-100 bg-no-repeat bg-[radial-gradient(ellipse_farthest-corner_at_15%_20%,var(--sphere-color-1)_0%,transparent_75%),radial-gradient(ellipse_farthest-corner_at_80%_30%,var(--sphere-color-2)_0%,transparent_70%),radial-gradient(ellipse_farthest-corner_at_50%_50%,var(--sphere-color-3)_0%,transparent_80%),radial-gradient(ellipse_farthest-corner_at_30%_75%,var(--sphere-color-4)_0%,transparent_70%),radial-gradient(ellipse_farthest-corner_at_90%_70%,var(--sphere-color-5)_0%,transparent_75%),radial-gradient(circle_farthest-corner_at_5%_90%,var(--sphere-color-6)_0%,transparent_65%)] text-gray-800 antialiased">
+    <Header client:load />
 
-  <Header client:load />
-  
-  
-  <main class="min-h-screen  bg-cover bg-no-repeat bg-center">
-    <slot />
-  </main>
+    <main class="min-h-screen bg-cover bg-no-repeat bg-center">
+      <slot />
+    </main>
 
- 
- <Footer/>
+    <Footer />
 
-  <!-- Scripts de animación -->
-  <script is:inline>
-    document.addEventListener('DOMContentLoaded', () => {
-      if (typeof gsap !== 'undefined') {
-        gsap.registerPlugin(ScrollTrigger);
-        
-        gsap.utils.toArray('.animate-fadeIn').forEach(el => {
-          gsap.from(el, {
-            opacity: 0,
-            y: 20,
-            duration: 0.8,
-            scrollTrigger: {
-              trigger: el,
-              start: "top 80%",
-            }
+    <!-- Scripts de animación -->
+    <script is:inline>
+      document.addEventListener("DOMContentLoaded", () => {
+        if (typeof gsap !== "undefined") {
+          gsap.registerPlugin(ScrollTrigger);
+
+          gsap.utils.toArray(".animate-fadeIn").forEach((el) => {
+            gsap.from(el, {
+              opacity: 0,
+              y: 20,
+              duration: 0.8,
+              scrollTrigger: {
+                trigger: el,
+                start: "top 80%",
+              },
+            });
           });
-        });
-      }
-    });
-  </script>
-</body>
+        }
+      });
+    </script>
+  </body>
 </html>
