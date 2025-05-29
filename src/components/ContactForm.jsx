@@ -31,11 +31,11 @@ export default function ContactForm() {
             className="bg-gray-50 p-8 rounded-xl shadow-sm border border-gray-100">
             <form
               method="POST"
-              className="space-y-6"
+              netlify
               netlify-honeypot="bot-field"
               data-netlify-recaptcha="true"
-              data-netlify="true"
               action={"/gracias"}
+              className="space-y-6"
               >
               <p className="hidden">
                 <label>
