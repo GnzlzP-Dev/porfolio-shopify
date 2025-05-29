@@ -46,7 +46,7 @@ export default function ProjectCard({ project }) {
 
         {project.highlights && (
           <ul className="space-y-2 text-sm text-gray-600">
-            {project.highlights.slice(0, 9).map((highlight, index) => (
+            {project.highlights.map((highlight, index) => (
               <li key={index} className="flex items-start">
                 <svg
                   className="flex-shrink-0 w-4 h-4 mr-2 text-blue-600"

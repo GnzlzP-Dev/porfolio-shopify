@@ -5,10 +5,17 @@
   --shopify: #512da5;
   --shopify-dark: #42228d;
   --shopify-light: #8160ce;
+  --sphere-color-1: hsla(217, 100%, 70%, 0.35); /* Azul más vibrante */
+  --sphere-color-2: hsla(266, 100%, 65%, 0.3); /* Púrpura */
+  --sphere-color-3: hsla(328, 80%, 80%, 0.25); /* Rosa claro/lavanda */
+  --sphere-color-4: hsla(160, 70%, 70%, 0.25); /* Turquesa suave */
+  --sphere-color-5: hsla(30, 100%, 75%, 0.3); /* Naranja suave */
+  --sphere-color-6: hsla(60, 100%, 70%, 0.2); /* Amarillo suave */
+  /* Puedes añadir más variables o modificar estas fácilmente */
 }
 
-
-.shopify, .text-shopify{
+.shopify,
+.text-shopify {
   color: var(--shopify);
 }
 
@@ -19,5 +26,3 @@
 .hover\:text-shopify:hover {
   color: var(--shopify);
 }
-
-

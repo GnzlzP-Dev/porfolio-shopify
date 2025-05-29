@@ -7,17 +7,17 @@ export default function ContactForm() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="py-16 bg-white">
+      className="py-16 bg-white/50 backdrop-blur-sm">
       <div className="container mx-auto px-4 max-w-4xl">
         <motion.div
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.2 }}
           className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h1 className="text-4xl md:text-5xl font-bold text-[var(--shopify-dark)] mb-4">
             Trabajemos Juntos
           </h1>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-xl text-[var(--shopify-dark)] max-w-2xl mx-auto">
             ¿Listo para llevar tu tienda Shopify al siguiente nivel? Envíame un
             mensaje.
           </p>

@@ -15,7 +15,7 @@ export default function Header() {
           <span className="text-shopify">GnzlzP</span>
           <sub>{":{Dev}"}</sub>
         </motion.a>
-        <ul className="hidden md:flex space-x-8">
+        <ul className=" md:flex space-x-8">
           <li>
             <a
               href="/proyectos"

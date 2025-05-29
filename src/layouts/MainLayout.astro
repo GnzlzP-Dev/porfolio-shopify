@@ -35,12 +35,13 @@ const { title = "Mi Portfolio | Desarrollador Web", description = "Portafolio de
   <ClientRouter />
 </head>
 
-<body class="font-sans bg-gray-100 text-gray-800 antialiased">
+<body class="font-sans min-h-screen
+    bg-neutral-100 bg-no-repeat bg-[radial-gradient(ellipse_farthest-corner_at_15%_20%,var(--sphere-color-1)_0%,transparent_75%),radial-gradient(ellipse_farthest-corner_at_80%_30%,var(--sphere-color-2)_0%,transparent_70%),radial-gradient(ellipse_farthest-corner_at_50%_50%,var(--sphere-color-3)_0%,transparent_80%),radial-gradient(ellipse_farthest-corner_at_30%_75%,var(--sphere-color-4)_0%,transparent_70%),radial-gradient(ellipse_farthest-corner_at_90%_70%,var(--sphere-color-5)_0%,transparent_75%),radial-gradient(circle_farthest-corner_at_5%_90%,var(--sphere-color-6)_0%,transparent_65%)] text-gray-800 antialiased">
 
   <Header client:load />
   
   
-  <main class="min-h-screen bg-[url('images/Hero.webp')] bg-cover bg-no-repeat bg-center">
+  <main class="min-h-screen  bg-cover bg-no-repeat bg-center">
     <slot />
   </main>
 
