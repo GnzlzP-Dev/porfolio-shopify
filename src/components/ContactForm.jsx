@@ -34,7 +34,7 @@ export default function ContactForm() {
               method="POST"
               data-netlify="true"
               netlify-netlify-honeypot="bot-field"
-              data-netlify-recaptcha="true"
+              // data-netlify-recaptcha="true"
               action={"/gracias"}
               className="space-y-6"
               >
