@@ -121,7 +121,7 @@ export default function ContactForm() {
                   className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-shopify focus:border-transparent"
                   placeholder="Describe tu proyecto..."></textarea>
               </div>
-              <div data-netlify-recaptcha="true"></div>
+              {/* <div data-netlify-recaptcha="true"></div> */}
               <motion.button
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
