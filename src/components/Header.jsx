@@ -12,8 +12,15 @@ export default function Header() {
           href="/"
           whileHover={{ scale: 1.05 }}
           className="text-2xl font-bold">
-          <span className="text-shopify">GnzlzP</span>
-          <sub>{":{Dev}"}</sub>
+            <picture>
+              <source
+                media="(max-width: 768px)"
+                srcSet="/images/logo-64.png" />
+              <img
+                src="/images/logo-100.png"
+                alt="Tienda en línea"
+                className="inline-block mr-2" />
+            </picture>
         </motion.a>
         <ul className=" md:flex space-x-8">
           {/* <li>
@@ -26,7 +33,7 @@ export default function Header() {
           <li>
             <a
               href="/contacto"
-              className="hover:text-shopify transition-colors duration-200">
+              className="text-2xl hover:text-shopify transition-colors duration-200">
               Contacto
             </a>
           </li>
