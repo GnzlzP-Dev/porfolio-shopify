@@ -33,7 +33,7 @@ export default function Header() {
           <li>
             <a
               href="/contacto"
-              className="text-2xl hover:text-shopify transition-colors duration-200">
+              className="text-2xl md:text-[16px] hover:text-shopify transition-colors duration-200">
               Contacto
             </a>
           </li>
